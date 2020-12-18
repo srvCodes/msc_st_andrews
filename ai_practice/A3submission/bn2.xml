@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIF VERSION="0.3"  xmlns="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3 http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3/XMLBIFv0_3.xsd">
+<NETWORK>
+<NAME>Untitled</NAME>
+<PROPERTY>detailed = </PROPERTY>
+<PROPERTY>short = </PROPERTY>
+
+<VARIABLE TYPE="nature">
+	<NAME>Weather</NAME>
+	<OUTCOME>SU</OUTCOME>
+	<OUTCOME>RA</OUTCOME>
+	<OUTCOME>OV</OUTCOME>
+	<OUTCOME>SN</OUTCOME>
+	<OBS>RA</OBS>
+	<PROPERTY>position = (7196.2197265625, 5056.8525390625)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Visibility sensor</NAME>
+	<OUTCOME>H</OUTCOME>
+	<OUTCOME>L</OUTCOME>
+	<PROPERTY>position = (7192.3046875, 5192.96142578125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Effective visibility</NAME>
+	<OUTCOME>H</OUTCOME>
+	<OUTCOME>L</OUTCOME>
+	<PROPERTY>position = (7208.60107421875, 5308.95849609375)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Peak time</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<OBS>F</OBS>
+	<PROPERTY>position = (7434.5244140625, 5055.8466796875)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Traffic flow</NAME>
+	<OUTCOME>H</OUTCOME>
+	<OUTCOME>L</OUTCOME>
+	<PROPERTY>position = (7426.58154296875, 5148.1220703125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Day</NAME>
+	<OUTCOME>W</OUTCOME>
+	<OUTCOME>H</OUTCOME>
+	<OBS>H</OBS>
+	<PROPERTY>position = (7692.74560546875, 5054.24853515625)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Car circulation</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7681.39892578125, 5171.37255859375)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Traffic congestion prediction</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7496.36328125, 5317.638671875)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Emergency alert</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7489.515625, 5412.1474609375)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Camera output</NAME>
+	<OUTCOME>H</OUTCOME>
+	<OUTCOME>L</OUTCOME>
+	<PROPERTY>position = (7433.4326171875, 5230.607421875)</PROPERTY>
+</VARIABLE>
+
+<DEFINITION>
+	<FOR>Weather</FOR>
+	<TABLE>0.25 0.25 0.25 0.25</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Visibility sensor</FOR>
+	<GIVEN>Weather</GIVEN>
+	<TABLE>0.85 0.15 0.3 0.7 0.65 0.35 0.15 0.85</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Effective visibility</FOR>
+	<GIVEN>Visibility sensor</GIVEN>
+	<TABLE>0.95 0.05 0.05 0.95</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Peak time</FOR>
+	<GIVEN>Day</GIVEN>
+	<TABLE>0.375 0.625 0.05 0.95</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Traffic flow</FOR>
+	<GIVEN>Weather</GIVEN>
+	<GIVEN>Peak time</GIVEN>
+	<GIVEN>Car circulation</GIVEN>
+	<TABLE>0.45 0.55 0.35 0.65 0.65 0.35 0.15 0.85 0.95 0.05 0.85 0.15 0.8 0.2 0.3 0.7 0.82 0.18 0.72 0.28 0.67 0.33 0.18 0.82 0.9 0.1 0.8 0.2 0.75 0.25 0.25 0.75</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Day</FOR>
+	<TABLE>0.78 0.22</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Car circulation</FOR>
+	<GIVEN>Day</GIVEN>
+	<TABLE>0.6 0.4 0.3 0.7</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Traffic congestion prediction</FOR>
+	<GIVEN>Effective visibility</GIVEN>
+	<GIVEN>Camera output</GIVEN>
+	<TABLE>0.8 0.2 0.15 0.85 0.92 0.08 0.4 0.6</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Emergency alert</FOR>
+	<GIVEN>Traffic congestion prediction</GIVEN>
+	<TABLE>0.9 0.1 0.1 0.9</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Camera output</FOR>
+	<GIVEN>Traffic flow</GIVEN>
+	<TABLE>0.95 0.05 0.05 0.95</TABLE>
+</DEFINITION>
+</NETWORK>
+</BIF>

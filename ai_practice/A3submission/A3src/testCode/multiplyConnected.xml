@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIF VERSION="0.3"  xmlns="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3 http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3/XMLBIFv0_3.xsd">
+<NETWORK>
+<NAME>Untitled</NAME>
+<PROPERTY>detailed = </PROPERTY>
+<PROPERTY>short = </PROPERTY>
+
+<VARIABLE TYPE="nature">
+	<NAME>Peak time</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7503.80712890625, 5080.09326171875)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Traffic flow</NAME>
+	<OUTCOME>H</OUTCOME>
+	<OUTCOME>L</OUTCOME>
+	<PROPERTY>position = (7475.83349609375, 5405.05322265625)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Day</NAME>
+	<OUTCOME>W</OUTCOME>
+	<OUTCOME>H</OUTCOME>
+	<OBS>H</OBS>
+	<PROPERTY>position = (8413.1669921875, 5074.46435546875)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Car circulation</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (8373.20703125, 5486.93408203125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Camera output</NAME>
+	<OUTCOME>H</OUTCOME>
+	<OUTCOME>L</OUTCOME>
+	<PROPERTY>position = (7499.96484375, 5695.53515625)</PROPERTY>
+</VARIABLE>
+
+<DEFINITION>
+	<FOR>Peak time</FOR>
+	<GIVEN>Day</GIVEN>
+	<TABLE>0.375 0.625 0.05 0.95</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Traffic flow</FOR>
+	<GIVEN>Peak time</GIVEN>
+	<GIVEN>Car circulation</GIVEN>
+	<TABLE>0.8 0.2 0.6 0.4 0.55 0.45 0.15 0.85</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Day</FOR>
+	<TABLE>0.78 0.22</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Car circulation</FOR>
+	<GIVEN>Day</GIVEN>
+	<TABLE>0.6 0.4 0.3 0.7</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Camera output</FOR>
+	<GIVEN>Traffic flow</GIVEN>
+	<TABLE>0.95 0.05 0.05 0.95</TABLE>
+</DEFINITION>
+</NETWORK>
+</BIF>

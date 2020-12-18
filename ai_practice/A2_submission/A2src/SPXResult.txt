@@ -1,0 +1,329 @@
+Original world:
+        0 1 2
+       - - -
+   0/ 1 1 t
+  1/ t 1 1
+ 2/ t 2 0
+
+Setting world!!Step: 0
+Number of visited cells: 0
+Number of cells to be visited: 9
+Agent's view of the world at step 1:
+        0 1 2
+       - - -
+   0/ 1 ? ?
+  1/ ? ? ?
+ 2/ ? ? ?
+
+Step: 1
+Number of visited cells: 1
+Number of cells to be visited: 8
+Agent's view of the world at step 1:
+        0 1 2
+       - - -
+   0/ 1 ? ?
+  1/ ? 1 ?
+ 2/ ? ? ?
+
+Step: 1
+Number of visited cells: 2
+Number of cells to be visited: 7
+Considering the cell in [0,1] coordinates
+
+Neighbour: [0,0]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 2
+
+Neighbour: [0,2]
+
+Neighbour: [1,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 5
+
+Neighbour: [1,2]
+Considering the cell in [0,2] coordinates
+
+Neighbour: [0,1]
+
+Neighbour: [1,2]
+Considering the cell in [1,0] coordinates
+
+Neighbour: [0,0]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 2
+
+Neighbour: [1,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 5
+
+Neighbour: [2,0]
+
+Neighbour: [2,1]
+Considering the cell in [1,2] coordinates
+
+Neighbour: [0,1]
+
+Neighbour: [0,2]
+
+Neighbour: [1,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 5
+
+Neighbour: [2,2]
+Considering the cell in [2,0] coordinates
+
+Neighbour: [1,0]
+
+Neighbour: [2,1]
+Considering the cell in [2,1] coordinates
+
+Neighbour: [1,0]
+
+Neighbour: [1,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 5
+
+Neighbour: [2,0]
+
+Neighbour: [2,2]
+Considering the cell in [2,2] coordinates
+
+Neighbour: [1,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 5
+
+Neighbour: [1,2]
+
+Neighbour: [2,1]Step: 8
+Number of visited cells: 2
+Number of cells to be visited: 7
+Considering the cell in [0,1] coordinates
+
+Neighbour: [0,0]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 2
+
+Neighbour: [0,2]
+
+Neighbour: [1,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 5
+
+Neighbour: [1,2]
+Considering the cell in [0,2] coordinates
+
+Neighbour: [0,1]
+
+Neighbour: [1,2]
+Considering the cell in [1,0] coordinates
+
+Neighbour: [0,0]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 2
+
+Neighbour: [1,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 5
+
+Neighbour: [2,0]
+
+Neighbour: [2,1]
+Considering the cell in [1,2] coordinates
+
+Neighbour: [0,1]
+
+Neighbour: [0,2]
+
+Neighbour: [1,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 5
+
+Neighbour: [2,2]
+Considering the cell in [2,0] coordinates
+
+Neighbour: [1,0]
+
+Neighbour: [2,1]
+Considering the cell in [2,1] coordinates
+
+Neighbour: [1,0]
+
+Neighbour: [1,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 5
+
+Neighbour: [2,0]
+
+Neighbour: [2,2]
+Considering the cell in [2,2] coordinates
+
+Neighbour: [1,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 5
+
+Neighbour: [1,2]
+
+Neighbour: [2,1]
+
+Switching to random !!
+Probe x y for uncovering the cell in [2,2] coordinates with content: '0'
+Agent's view of the world at step 0:
+        0 1 2
+       - - -
+   0/ 1 ? ?
+  1/ ? 1 ?
+ 2/ ? ? 0
+
+Cell [2,2] contains '0', now recursively probing its neighbours!
+
+Step: 1
+Probe x y for uncovering the cell in [1,2] coordinates with content: '1'
+Agent's view of the world at step 1:
+        0 1 2
+       - - -
+   0/ 1 ? ?
+  1/ ? 1 1
+ 2/ ? ? 0
+
+
+
+Step: 2
+Probe x y for uncovering the cell in [2,1] coordinates with content: '2'
+Agent's view of the world at step 2:
+        0 1 2
+       - - -
+   0/ 1 ? ?
+  1/ ? 1 1
+ 2/ ? 2 0
+
+Step: 15
+Number of visited cells: 5
+Number of cells to be visited: 4
+Considering the cell in [0,1] coordinates
+
+Neighbour: [0,0]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 2
+
+Neighbour: [0,2]
+
+Neighbour: [1,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 2
+
+Neighbour: [1,2]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 2
+Considering the cell in [0,2] coordinates
+
+Neighbour: [0,1]
+
+Neighbour: [1,2]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 2
+Considering the cell in [1,0] coordinates
+
+Neighbour: [0,0]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 2
+
+Neighbour: [1,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 2
+
+Neighbour: [2,0]
+
+Neighbour: [2,1]
+Clue value: 2
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 2
+Flagging the cell in [1,0] coordinates for danger!
+ No of nodes to be visited: 4
+Visited nodes: 5
+Agent's view of the world at step 18:
+        0 1 2
+       - - -
+   0/ 1 ? ?
+  1/ F 1 1
+ 2/ ? 2 0
+
+
+Considering the cell in [2,0] coordinates
+
+Neighbour: [1,0]
+Clue value: 22
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 1
+
+Neighbour: [2,1]
+Clue value: 2
+Dangers marked in neighbours of neighbour: 1
+ Covered cells in neighbours of neighbour: 1
+Flagging the cell in [2,0] coordinates for danger!
+ No of nodes to be visited: 4
+Visited nodes: 5
+Agent's view of the world at step 19:
+        0 1 2
+       - - -
+   0/ 1 ? ?
+  1/ F 1 1
+ 2/ F 2 0
+
+Step: 19
+Number of visited cells: 5
+Number of cells to be visited: 4
+Considering the cell in [0,1] coordinates
+
+Neighbour: [0,0]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 1
+ Covered cells in neighbours of neighbour: 1
+Probe x y for uncovering the cell in [0,1] coordinates with content: '1'
+ No of nodes to be visited: 3
+Visited nodes: 6
+Agent's view of the world at step 20:
+        0 1 2
+       - - -
+   0/ 1 1 ?
+  1/ F 1 1
+ 2/ F 2 0
+
+
+Considering the cell in [0,2] coordinates
+
+Neighbour: [0,1]
+Clue value: 1
+Dangers marked in neighbours of neighbour: 0
+ Covered cells in neighbours of neighbour: 1
+Flagging the cell in [0,2] coordinates for danger!
+ No of nodes to be visited: 3
+Visited nodes: 6
+Agent's view of the world at step 21:
+        0 1 2
+       - - -
+   0/ 1 1 F
+  1/ F 1 1
+ 2/ F 2 0
+
+
+Game won!

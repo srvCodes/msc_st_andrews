@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIF VERSION="0.3"  xmlns="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3 http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3/XMLBIFv0_3.xsd">
+<NETWORK>
+<NAME>Untitled</NAME>
+<PROPERTY>detailed = </PROPERTY>
+<PROPERTY>short = </PROPERTY>
+
+<VARIABLE TYPE="nature">
+	<NAME>Traffic flow</NAME>
+	<OUTCOME>H</OUTCOME>
+	<OUTCOME>L</OUTCOME>
+	<PROPERTY>position = (8149.181640625, 5255.14306640625)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Day</NAME>
+	<OUTCOME>W</OUTCOME>
+	<OUTCOME>H</OUTCOME>
+	<PROPERTY>position = (8141.33251953125, 5056.8388671875)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Car circulation</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7867.6455078125, 5127.416015625)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Traffic congestion prediction</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (8190.9541015625, 5624.73388671875)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Emergency alert</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7685.04638671875, 5747.1611328125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Camera output</NAME>
+	<OUTCOME>H</OUTCOME>
+	<OUTCOME>L</OUTCOME>
+	<OBS>H</OBS>
+	<PROPERTY>position = (7841.85693359375, 5429.37646484375)</PROPERTY>
+</VARIABLE>
+
+<DEFINITION>
+	<FOR>Traffic flow</FOR>
+	<GIVEN>Car circulation</GIVEN>
+	<TABLE>0.8 0.2 0.6 0.4</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Day</FOR>
+	<TABLE>0.78 0.22</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Car circulation</FOR>
+	<GIVEN>Day</GIVEN>
+	<TABLE>0.6 0.4 0.3 0.7</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Traffic congestion prediction</FOR>
+	<GIVEN>Camera output</GIVEN>
+	<TABLE>0.8 0.2 0.25 0.75</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Emergency alert</FOR>
+	<GIVEN>Traffic congestion prediction</GIVEN>
+	<TABLE>0.9 0.1 0.1 0.9</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Camera output</FOR>
+	<GIVEN>Traffic flow</GIVEN>
+	<TABLE>0.95 0.05 0.05 0.95</TABLE>
+</DEFINITION>
+</NETWORK>
+</BIF>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIF VERSION="0.3"  xmlns="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3 http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3/XMLBIFv0_3.xsd">
+<NETWORK>
+<NAME>Untitled</NAME>
+<PROPERTY>detailed = </PROPERTY>
+<PROPERTY>short = </PROPERTY>
+
+<VARIABLE TYPE="nature">
+	<NAME>Booster Separation</NAME>
+	<OUTCOME>FirstGo</OUTCOME>
+	<OUTCOME>Prolonged</OUTCOME>
+	<OUTCOME>Disaster</OUTCOME>
+	<OBS>Disaster</OBS>
+	<PROPERTY>position = (7546.67138671875, 5088.9912109375)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Weather</NAME>
+	<OUTCOME>Sunny</OUTCOME>
+	<OUTCOME>Cloudy</OUTCOME>
+	<OUTCOME>Storm</OUTCOME>
+	<OBS>Storm</OBS>
+	<PROPERTY>position = (7960.3681640625, 5095.97998046875)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Sensor Failure</NAME>
+	<OUTCOME>Low</OUTCOME>
+	<OUTCOME>Medium</OUTCOME>
+	<OUTCOME>Critical</OUTCOME>
+	<PROPERTY>position = (7435.115234375, 5228.7626953125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Parachute deployment</NAME>
+	<OUTCOME>Failure</OUTCOME>
+	<OUTCOME>Success</OUTCOME>
+	<PROPERTY>position = (7539.63232421875, 5440.01953125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Landing successful</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (8020.3408203125, 5385.9599609375)</PROPERTY>
+</VARIABLE>
+
+<DEFINITION>
+	<FOR>Booster Separation</FOR>
+	<TABLE>0.45 0.35 0.2</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Weather</FOR>
+	<TABLE>0.3334 0.3331 0.3335</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Sensor Failure</FOR>
+	<GIVEN>Booster Separation</GIVEN>
+	<TABLE>0.7 0.25 0.05 0.4 0.5 0.1 0.1 0.35 0.55</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Parachute deployment</FOR>
+	<GIVEN>Sensor Failure</GIVEN>
+	<TABLE>0.35 0.65 0.6 0.4 0.82 0.18</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Landing successful</FOR>
+	<GIVEN>Weather</GIVEN>
+	<GIVEN>Sensor Failure</GIVEN>
+	<GIVEN>Parachute deployment</GIVEN>
+	<TABLE>0.75 0.25 0.98 0.02 0.65 0.35 0.85 0.15 0.25 0.75 0.4 0.6 0.65 0.35 0.85 0.15 0.6 0.4 0.75 0.25 0.1 0.9 0.25 0.75 0.4 0.6 0.45 0.55 0.25 0.75 0.3 0.7 0.02 0.98 0.05 0.95</TABLE>
+</DEFINITION>
+</NETWORK>
+</BIF>
